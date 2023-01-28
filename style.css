@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-header: 'Staatliches', cursive;
+  --ff-text: 'Palanquin', sans-serif;
+
+  --fs-header: 4rem;
+  --fs-text: 1.6rem;
+
+  --bg-header-title: #CBC0D3;
+  --bg-header: #8E9AAF;
+  --bg-body: hsl(233, 100%, 97%, 1);
+
+}
+
+.page {
+  width: 39rem;
+  margin: 0 auto;
+}
+
+body {
+  background: var(--bg-body);
+
+}
+
+main {
+  display: grid;
+  gap: 3.6rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 1.4rem;
+  
+}
+
+header::before {
+  content: '';
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  height: 31rem;
+  z-index: -2;
+  background: var(--bg-header);
+}
+
+header img {
+  animation: topdown 400ms 200ms backwards;
+
+  padding: 3.2rem;
+}
+
+header h1 {
+  animation: topdown 400ms 200ms backwards;
+
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  
+  padding: 0.8rem 8.6rem;
+  background: var(--bg-header-title);
+  min-width: 100vw;
+}
+
+
+h2, h1 {
+  font-family: var(--ff-header);
+
+}
+
+p {
+  font-family: var(--ff-text);
+  font-size: var(--fs-text);
+  line-height: 1.5rem;
+  
+  text-align: center;
+
+  color: #23053A;
+  margin: 4.4rem auto 3.2rem;
+  width: 32rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #4A4E69;
+  background: #FEEAFA;
+  border-radius: 2rem;
+  top: 2rem;
+  right: 2rem;
+  position: absolute;
+  width: 11.2rem;
+  height: 3.5rem;
+  display: inline-flex;
+  justify-content: center;
+  animation: topdown 800ms 550ms backwards;
+}
+
+.card img {
+  width: 32rem;
+  transition: 300ms ease;
+
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: saturate(1.7);
+}
+
+.card {
+  animation: downtop 600ms 350ms backwards;
+  position: relative;
+  margin: 0 auto;
+  
+}
+
+@keyframes downtop {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes topdown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
